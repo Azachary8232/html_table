@@ -8,7 +8,23 @@
     <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
 </head>
 <body>
-<h1>Hello World!</h1>
+<table>
+    <thead>
+        <tr>
+            <td>First Name</td>
+            <td>Last Name</td>
+            <td>Full Name</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for user in users %}
+        <tr>
+            <td>{{ user['first_name']}}</td>
+            <td>{{ user['last_name']}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
 
 
 
